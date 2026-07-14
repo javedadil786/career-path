@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(4, 15, 25, 0.82),
+            rgba(4, 15, 25, 0.92)
+        ),
+        radial-gradient(
+            circle at top,
+            #174b3a,
+            #06131d 65%
+        );
+}
+
+.menu-card {
+    width: min(90%, 620px);
+
+    padding: 60px 45px;
+
+    text-align: center;
+
+    background: rgba(7, 24, 34, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+.small-title {
+    margin: 0 0 12px;
+
+    color: #74e8ad;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 8vw, 72px);
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    margin: 24px auto 38px;
+
+    max-width: 450px;
+
+    color: #b7c8d1;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.menu-buttons {
+    display: grid;
+    gap: 14px;
+}
+
+.menu-button {
+    width: 100%;
+
+    padding: 17px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+
+    color: white;
+    background: #152d3a;
+
+    font: inherit;
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.menu-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #1d3d4e;
+}
+
+.menu-button.primary {
+    color: #062217;
+    background: #74e8ad;
+    border-color: #74e8ad;
+}
+
+.menu-button.primary:hover {
+    background: #95f2c2;
+}
+
+.menu-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}.career-card {
+    width: min(94%, 900px);
+
+    padding: 45px;
+
+    color: white;
+
+    background: rgba(7, 24, 34, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+.career-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.overall-circle {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #062217;
+    background: #74e8ad;
+
+    border-radius: 50%;
+}
+
+.overall-number {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.overall-label {
+    margin-top: 6px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.career-grid,
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+.info-box,
+.stat-box {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #102b38;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+}
+
+.info-label,
+.stat-box span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8da7b4;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-box strong,
+.stat-box strong {
+    font-size: 23px;
+}
+
+.career-card h2 {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 700px) {
+
+    .career-header {
+        align-items: flex-start;
+    }
+
+    .career-grid,
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overall-circle {
+        width: 95px;
+        height: 95px;
+    }
+
+    .overall-number {
+        font-size: 34px;
+    }
+
+}form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    margin-top: 8px;
+
+    color: #b7c8d1;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-align: left;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 15px;
+
+    color: white;
+    background: #102b38;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+
+    font: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #74e8ad;
+    border-color: transparent;
+}

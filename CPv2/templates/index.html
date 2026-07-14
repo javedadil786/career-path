@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Career Path V2</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <main class="menu-card">
+
+        <p class="small-title">
+            Football Career Simulator
+        </p>
+
+        <h1>
+            CAREER PATH V2
+        </h1>
+
+        <p class="subtitle">
+
+            Start as a teenager.
+
+            Earn transfers.
+
+            Win trophies.
+
+            Become a football legend.
+
+        </p>
+
+        <div class="menu-buttons">
+
+            <a
+                class="menu-button primary"
+                href="{{ url_for('create_player_page') }}"
+            >
+                ⚽ New Career
+            </a>
+
+            <button
+                class="menu-button"
+                disabled
+            >
+                📂 Load Career
+            </button>
+
+            <button
+                class="menu-button"
+                disabled
+            >
+                🏆 Hall of Fame
+            </button>
+
+            <button
+                class="menu-button"
+                disabled
+            >
+                ⚙️ Settings
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
