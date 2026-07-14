@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+from database import configure_database
+
 from player import (
     generate_starting_stats,
     calculate_overall,
@@ -17,6 +19,8 @@ from transfers import (
 
 
 app = Flask(__name__)
+
+configure_database(app)
 
 current_player = None
 pending_transfer_offers = []
